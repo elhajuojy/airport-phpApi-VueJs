@@ -7,7 +7,7 @@ $db = $app->getDatabase();
 
 
 
-$ariports = $db->query("SELECT * FROM `flights`")->get();
+$flights = $db->query("SELECT * FROM `flights`")->get();
 
 
-echo json_encode($ariports);
+echo json_encode($flights);
