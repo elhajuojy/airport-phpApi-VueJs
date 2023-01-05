@@ -5,6 +5,9 @@ $app  = App::getInstance();
 $db = $app->getDatabase();
 
 
+if (isset($_GET['id'])){
+
+}
 
 
 $ariports = $db->query("SELECT * FROM `airports`")->get();
