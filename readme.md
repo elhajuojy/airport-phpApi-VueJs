@@ -1,6 +1,6 @@
 # AriPorts api Example  With PHP
 
-## this example contains simple api in using php native 
+## this example contains simple api using php native 
 
 
 Install requirements:
