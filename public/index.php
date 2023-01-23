@@ -3,6 +3,7 @@
 use Core\App;
 use Model\Client;
 
+header("Access-Control-Allow-Origin: *");
 
 session_start();
 const BASE_PATH = __DIR__.'/../';
