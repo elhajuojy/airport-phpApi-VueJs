@@ -11,7 +11,9 @@ import planes from '../components/planes.vue';
         <planes />
       </template>
       <template #fallback>
-        <div>Loading...</div>
+        <div>
+          <h1>Loading...</h1>
+        </div>
       </template>
     </Suspense>
   </main>

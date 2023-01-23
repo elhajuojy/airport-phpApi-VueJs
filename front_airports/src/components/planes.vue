@@ -13,7 +13,9 @@ const fetchPlanes = async () => {
     console.log(state.planes);
 }
 try{
-    await fetchPlanes();
+    setTimeout(() => {
+        fetchPlanes();
+    }, 1000);
 
 }catch(err){
     console.log(err);
