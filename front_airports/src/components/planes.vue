@@ -6,20 +6,17 @@ const state = reactive({
 })
 
 const fetchPlanes = async () => {
-    const response = await fetch('http://localhost:9001/planes',);
+    const response = await fetch('http://localhost:8000/planes',);
     const data = await response.json();
     // console.log(data);
-    state.planes = data;
+    setTimeout(()=>{
+        state.planes = data;
+    },300)
     console.log(state.planes);
 }
-try{
-    setTimeout(() => {
-        fetchPlanes();
-    }, 1000);
 
-}catch(err){
-    console.log(err);
-}
+await fetchPlanes();
+
 
 </script>
 
