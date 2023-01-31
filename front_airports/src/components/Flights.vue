@@ -2,16 +2,16 @@
 import { ref, onMounted, reactive } from 'vue';
 
 const state = reactive({
-    planes: []
+    flights : []
 })
 
 const fetchPlanes = async () => {
-    const response = await fetch('http://localhost:8000/planes',);
+    const response = await fetch('http://localhost:8000/flights',);
     const data = await response.json();
     setTimeout(()=>{
-        state.planes = data;
+        state.flights = data;
     },300)
-    console.log(state.planes);
+    console.log(state.flights);
 }
 
 await fetchPlanes();
@@ -21,13 +21,13 @@ await fetchPlanes();
 
 <template>
   <div>
-    <H1>Planes Goes Here </H1>
+    <H1>Flights  Goes Here </H1>
     <div class="planes">
         <ul class="list-planes">
-            <li v-for="item in state.planes" :key="item.id">
+            <li v-for="item in state.flights" :key="item.id">
                 <a href="">
-                    {{item.model}}
-                    {{ item.capacity }}
+                    {{item.id}}
+                    {{ item.origin_id }}
                 </a>
             </li>
         </ul>
